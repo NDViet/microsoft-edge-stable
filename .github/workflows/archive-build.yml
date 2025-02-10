@@ -1,5 +1,4 @@
-# Configuration for Lock Threads - https://github.com/dessant/lock-threads
-name: 'Extract Versions'
+name: 'Archive Build'
 
 on:
   workflow_dispatch:
@@ -21,16 +20,15 @@ jobs:
           fetch-depth: 0
       - name: Download package
         run: |
-          wget -sk https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${VERSION}_amd64.deb
-        env:
-          VERSION: ${{ github.event.inputs.version }}
+          wget -k https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${{ github.event.inputs.version }}_amd64.deb
       - name: Release
         uses: softprops/action-gh-release@master
         with:
           files: |
             microsoft-edge-stable_${{ github.event.inputs.version }}_amd64.deb
           token: ${{ secrets.GITHUB_TOKEN }}
-          release_name: ${{ github.event.inputs.version }}
-          release_body: ${{ github.event.inputs.version }}
+          tag_name: ${{ github.event.inputs.version }}
+          name: ${{ github.event.inputs.version }}
+          body: ${{ github.event.inputs.version }}
           draft: false
           prerelease: false
