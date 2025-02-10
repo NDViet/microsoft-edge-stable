@@ -9,7 +9,7 @@ def extract_versions_from_yaml(file_path):
         versions.append(details['EDGE_PACKAGE_VERSION'])
     versions.reverse()
 
-    versions_string = str(versions)
+    versions_string = str(versions).replace(' ', '')
     return versions_string
 
 file_path = 'output.yaml'
