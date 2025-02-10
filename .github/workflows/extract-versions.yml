@@ -40,7 +40,6 @@ jobs:
         uses: actions/github-script@main
         with:
           script: |
-            const { context, github } = require('@actions/github');
             const { execSync } = require('child_process');
             const outputVersion = process.env.OUTPUT_VERSIONS;
             github.rest.actions.createWorkflowDispatch({
