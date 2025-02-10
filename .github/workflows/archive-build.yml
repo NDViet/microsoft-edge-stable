@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         version: ${{ fromJSON(github.event.inputs.versions)}}
     steps:
@@ -33,20 +34,20 @@ jobs:
         uses: insightsengineering/release-existence-action@main
         id: check_release
         with:
-          release-tag: ${{ github.event.inputs.version }}
+          release-tag: ${{ matrix.version }}
       - name: Download package
         if: steps.check_release.outputs.release-exists == 'false'
         run: |
-          wget -k https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${{ github.event.inputs.version }}_amd64.deb
+          wget -k https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${{ matrix.version }}_amd64.deb
       - name: Archive build as GH release
         if: steps.check_release.outputs.release-exists == 'false'
         uses: softprops/action-gh-release@master
         with:
           files: |
-            microsoft-edge-stable_${{ github.event.inputs.version }}_amd64.deb
+            microsoft-edge-stable_${{ matrix.version }}_amd64.deb
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ${{ github.event.inputs.version }}
-          name: ${{ github.event.inputs.version }}
-          body: ${{ github.event.inputs.version }}
+          tag_name: ${{ matrix.version }}
+          name: ${{ matrix.version }}
+          body: ${{ matrix.version }}
           draft: false
           prerelease: false
