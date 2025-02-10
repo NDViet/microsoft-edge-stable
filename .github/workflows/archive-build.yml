@@ -1,0 +1,36 @@
+# Configuration for Lock Threads - https://github.com/dessant/lock-threads
+name: 'Extract Versions'
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version'
+        required: true
+
+permissions: write-all
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Download package
+        run: |
+          wget -sk https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${VERSION}_amd64.deb
+        env:
+          VERSION: ${{ github.event.inputs.version }}
+      - name: Release
+        uses: softprops/action-gh-release@master
+        with:
+          files: |
+            microsoft-edge-stable_${{ github.event.inputs.version }}_amd64.deb
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release_name: ${{ github.event.inputs.version }}
+          release_body: ${{ github.event.inputs.version }}
+          draft: false
+          prerelease: false

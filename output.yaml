@@ -1,0 +1,62 @@
+matrix:
+  browser:
+    '132':
+      EDGE_VERSION: microsoft-edge-stable=132.0.2957.140-1
+      EDGE_PACKAGE_VERSION: 132.0.2957.140-1
+    '131':
+      EDGE_VERSION: microsoft-edge-stable=131.0.2903.99-1
+      EDGE_PACKAGE_VERSION: 131.0.2903.99-1
+    '130':
+      EDGE_VERSION: microsoft-edge-stable=130.0.2849.80-1
+      EDGE_PACKAGE_VERSION: 130.0.2849.80-1
+    '129':
+      EDGE_VERSION: microsoft-edge-stable=129.0.2792.89-1
+      EDGE_PACKAGE_VERSION: 129.0.2792.89-1
+    '128':
+      EDGE_VERSION: microsoft-edge-stable=128.0.2739.79-1
+      EDGE_PACKAGE_VERSION: 128.0.2739.79-1
+    '127':
+      EDGE_VERSION: microsoft-edge-stable=127.0.2651.98-1
+      EDGE_PACKAGE_VERSION: 127.0.2651.98-1
+    '126':
+      EDGE_VERSION: microsoft-edge-stable=126.0.2592.87-1
+      EDGE_PACKAGE_VERSION: 126.0.2592.87-1
+    '125':
+      EDGE_VERSION: microsoft-edge-stable=125.0.2535.92-1
+      EDGE_PACKAGE_VERSION: 125.0.2535.92-1
+    '124':
+      EDGE_VERSION: microsoft-edge-stable=124.0.2478.97-1
+      EDGE_PACKAGE_VERSION: 124.0.2478.97-1
+    '123':
+      EDGE_VERSION: microsoft-edge-stable=123.0.2420.97-1
+      EDGE_PACKAGE_VERSION: 123.0.2420.97-1
+    '122':
+      EDGE_VERSION: microsoft-edge-stable=122.0.2365.92-1
+      EDGE_PACKAGE_VERSION: 122.0.2365.92-1
+    '121':
+      EDGE_VERSION: microsoft-edge-stable=121.0.2277.98-1
+      EDGE_PACKAGE_VERSION: 121.0.2277.98-1
+    '120':
+      EDGE_VERSION: microsoft-edge-stable=120.0.2210.91-1
+      EDGE_PACKAGE_VERSION: 120.0.2210.91-1
+    '119':
+      EDGE_VERSION: microsoft-edge-stable=119.0.2151.97-1
+      EDGE_PACKAGE_VERSION: 119.0.2151.97-1
+    '118':
+      EDGE_VERSION: microsoft-edge-stable=118.0.2088.76-1
+      EDGE_PACKAGE_VERSION: 118.0.2088.76-1
+    '117':
+      EDGE_VERSION: microsoft-edge-stable=117.0.2045.55-1
+      EDGE_PACKAGE_VERSION: 117.0.2045.55-1
+    '116':
+      EDGE_VERSION: microsoft-edge-stable=116.0.1938.81-1
+      EDGE_PACKAGE_VERSION: 116.0.1938.81-1
+    '115':
+      EDGE_VERSION: microsoft-edge-stable=115.0.1901.203-1
+      EDGE_PACKAGE_VERSION: 115.0.1901.203-1
+    '114':
+      EDGE_VERSION: microsoft-edge-stable=114.0.1823.82-1
+      EDGE_PACKAGE_VERSION: 114.0.1823.82-1
+    '95':
+      EDGE_VERSION: microsoft-edge-stable=95.0.1020.40-1
+      EDGE_PACKAGE_VERSION: 95.0.1020.40-1
