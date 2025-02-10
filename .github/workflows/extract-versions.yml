@@ -35,7 +35,7 @@ jobs:
       - name: Read list of versions
         run: |
           OUTPUT_VERSION="$(make read_versions)"
-          echo "OUTPUT_VERSION=${OUTPUT_VERSION}" >> $GITHUB_ENV
+          echo "OUTPUT_VERSION=\"${OUTPUT_VERSION}\"" >> $GITHUB_ENV
       - name: Call workflow archive build
         uses: actions/github-script@main
         with:
