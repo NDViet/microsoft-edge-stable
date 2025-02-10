@@ -14,4 +14,5 @@ def extract_versions_from_yaml(file_path):
 
 file_path = 'output.yaml'
 versions_string = extract_versions_from_yaml(file_path)
-print(versions_string)
+with open('.env', 'w') as file:
+    file.write(f"OUTPUT_VERSIONS=\"{versions_string}\"")
