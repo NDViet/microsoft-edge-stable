@@ -1,27 +1,45 @@
 name: 'Archive Build'
 
 on:
+  workflow_call:
+    inputs:
+      versions:
+        description: 'List of versions. For example: ["95.0.1020.40-1", "114.0.1823.82-1"]'
+        required: true
+        type: string
   workflow_dispatch:
     inputs:
-      version:
-        description: 'Version'
+      versions:
+        description: 'List of versions. For example: ["95.0.1020.40-1", "114.0.1823.82-1"]'
         required: true
+        type: string
 
 permissions: write-all
 
 jobs:
   action:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ${{ fromJSON(github.event.inputs.versions)}}
     steps:
       - name: Checkout code
         uses: actions/checkout@main
         with:
           persist-credentials: false
           fetch-depth: 0
+      - name: Check if version was archived already
+        uses: insightsengineering/release-existence-action@main
+        id: check_release
+        with:
+          release-tag: ${{ github.event.inputs.version }}
       - name: Download package
+        if: steps.check_release.outputs.release-exists == 'false'
         run: |
           wget -k https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${{ github.event.inputs.version }}_amd64.deb
-      - name: Release
+      - name: Archive build as GH release
+        if: steps.check_release.outputs.release-exists == 'false'
         uses: softprops/action-gh-release@master
         with:
           files: |

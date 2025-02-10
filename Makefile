@@ -3,3 +3,6 @@ install_dependencies:
 
 extract_versions:
 	python3 scripts/extract_versions.py
+
+read_versions:
+	python3 scripts/read_versions.py
