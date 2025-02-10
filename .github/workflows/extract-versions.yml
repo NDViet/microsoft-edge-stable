@@ -2,13 +2,11 @@ name: 'Extract Versions'
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 0 * * *'
 
 permissions: write-all
 
 jobs:
-  action:
+  extract-versions:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
