@@ -1,14 +1,14 @@
 matrix:
   browser:
     '133':
-      EDGE_VERSION: microsoft-edge-stable=133.0.3065.69-1
-      EDGE_PACKAGE_VERSION: 133.0.3065.69-1
+      EDGE_VERSION: microsoft-edge-stable=133.0.3065.82-1
+      EDGE_PACKAGE_VERSION: 133.0.3065.82-1
     '132':
       EDGE_VERSION: microsoft-edge-stable=132.0.2957.140-1
       EDGE_PACKAGE_VERSION: 132.0.2957.140-1
     '131':
-      EDGE_VERSION: microsoft-edge-stable=131.0.2903.99-1
-      EDGE_PACKAGE_VERSION: 131.0.2903.99-1
+      EDGE_VERSION: microsoft-edge-stable=131.0.2903.147-1
+      EDGE_PACKAGE_VERSION: 131.0.2903.147-1
     '130':
       EDGE_VERSION: microsoft-edge-stable=130.0.2849.80-1
       EDGE_PACKAGE_VERSION: 130.0.2849.80-1
@@ -19,17 +19,17 @@ matrix:
       EDGE_VERSION: microsoft-edge-stable=128.0.2739.79-1
       EDGE_PACKAGE_VERSION: 128.0.2739.79-1
     '127':
-      EDGE_VERSION: microsoft-edge-stable=127.0.2651.98-1
-      EDGE_PACKAGE_VERSION: 127.0.2651.98-1
+      EDGE_VERSION: microsoft-edge-stable=127.0.2651.105-1
+      EDGE_PACKAGE_VERSION: 127.0.2651.105-1
     '126':
-      EDGE_VERSION: microsoft-edge-stable=126.0.2592.87-1
-      EDGE_PACKAGE_VERSION: 126.0.2592.87-1
+      EDGE_VERSION: microsoft-edge-stable=126.0.2592.113-1
+      EDGE_PACKAGE_VERSION: 126.0.2592.113-1
     '125':
       EDGE_VERSION: microsoft-edge-stable=125.0.2535.92-1
       EDGE_PACKAGE_VERSION: 125.0.2535.92-1
     '124':
-      EDGE_VERSION: microsoft-edge-stable=124.0.2478.97-1
-      EDGE_PACKAGE_VERSION: 124.0.2478.97-1
+      EDGE_VERSION: microsoft-edge-stable=124.0.2478.109-1
+      EDGE_PACKAGE_VERSION: 124.0.2478.109-1
     '123':
       EDGE_VERSION: microsoft-edge-stable=123.0.2420.97-1
       EDGE_PACKAGE_VERSION: 123.0.2420.97-1
@@ -37,11 +37,11 @@ matrix:
       EDGE_VERSION: microsoft-edge-stable=122.0.2365.92-1
       EDGE_PACKAGE_VERSION: 122.0.2365.92-1
     '121':
-      EDGE_VERSION: microsoft-edge-stable=121.0.2277.98-1
-      EDGE_PACKAGE_VERSION: 121.0.2277.98-1
+      EDGE_VERSION: microsoft-edge-stable=121.0.2277.128-1
+      EDGE_PACKAGE_VERSION: 121.0.2277.128-1
     '120':
-      EDGE_VERSION: microsoft-edge-stable=120.0.2210.91-1
-      EDGE_PACKAGE_VERSION: 120.0.2210.91-1
+      EDGE_VERSION: microsoft-edge-stable=120.0.2210.144-1
+      EDGE_PACKAGE_VERSION: 120.0.2210.144-1
     '119':
       EDGE_VERSION: microsoft-edge-stable=119.0.2151.97-1
       EDGE_PACKAGE_VERSION: 119.0.2151.97-1
