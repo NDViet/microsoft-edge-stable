@@ -1,5 +1,8 @@
 matrix:
   browser:
+    '141':
+      EDGE_VERSION: microsoft-edge-stable=141.0.3537.57-1
+      EDGE_PACKAGE_VERSION: 141.0.3537.57-1
     '140':
       EDGE_VERSION: microsoft-edge-stable=140.0.3485.94-1
       EDGE_PACKAGE_VERSION: 140.0.3485.94-1
