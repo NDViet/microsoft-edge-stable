@@ -51,3 +51,10 @@ jobs:
           body: ${{ matrix.version }}
           draft: false
           prerelease: false
+      # Best effort: old builds may already be pruned from msedgedriver.microsoft.com.
+      # Runs for existing releases too, so this workflow doubles as a driver backfill.
+      - name: Archive matching edgedriver
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./scripts/archive_edgedriver.sh "${{ matrix.version }}"
