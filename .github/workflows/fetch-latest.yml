@@ -61,3 +61,10 @@ jobs:
           body: ${{ env.LATEST_VERSION }}
           draft: false
           prerelease: false
+      # Runs even when the release already existed, so releases created before
+      # this step existed get their driver attached while Microsoft still serves it.
+      - name: Archive matching edgedriver
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./scripts/archive_edgedriver.sh "${LATEST_VERSION}" --strict
